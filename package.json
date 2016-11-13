@@ -1,0 +1,19 @@
+{
+  "name": "grunt-requirejs",
+  "version": "1.0.0",
+  "description": "grunt+requirejs的老旧项目拾遗，主要用于requirejs构建多页面项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baronhuang/grunt-requirejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baronhuang/grunt-requirejs/issues"
+  },
+  "homepage": "https://github.com/baronhuang/grunt-requirejs#readme"
+}

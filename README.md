@@ -47,7 +47,7 @@ ______________
 
 [甜心是你][abc]
 
-[![http://service.ixingtu.com/ixtres/Advertisement/0bcebfecc18844778381e772433cba6f_shortPic.png]](http://service.ixingtu.com/ixtres/Advertisement/0bcebfecc18844778381e772433cba6f_shortPic.png "甜心是你")
+[![](http://service.ixingtu.com/ixtres/Advertisement/0bcebfecc18844778381e772433cba6f_shortPic.png '甜心是你')](http://service.ixingtu.com/ixtres/Advertisement/0bcebfecc18844778381e772433cba6f_shortPic.png "甜心是你")
 
 [abc]:http://service.ixingtu.com/ixtres/Advertisement/0bcebfecc18844778381e772433cba6f_shortPic.png "甜心是你"
 

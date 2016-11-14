@@ -51,9 +51,22 @@ ______________
 
 [abc]:http://service.ixingtu.com/ixtres/Advertisement/0bcebfecc18844778381e772433cba6f_shortPic.png "甜心是你"
 
+- [x] 选择
+- [x] 选择
+- [x] 选择
+- [ ] 不选择
+- [ ] 不选择
+- [ ] 不选择
 
+>Tips:
+>>我是一条Tips
 
-
+代码高亮
+----
+```
+我是一段javascript代码
+document.getElementById("myH1").innerHTML="Welcome to my Homepage"; //javascipt
+```
 
 
 

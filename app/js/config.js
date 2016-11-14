@@ -11,12 +11,9 @@
 
 
             /*自定义模块*/
-            'jquery.custom': 'js/common/jquery.custom',
-            'leftNav': 'js/common/leftNav',
-
+            // 'jquery.custom': 'js/common/jquery.custom',
+            'nav': 'js/common/nav',
             'templatePath': 'text' /*模板路径*/
-
-
 
         },
         shim: {
@@ -24,16 +21,15 @@
                 deps: ['jquery'],
                 exports: 'bootstrap'
             },
-
-
         }
     });
 
     /*重要：首先加载所有的依赖，为了后续js压缩合并做准备*/
     require([
         "jquery",
+        "bootstrap",
         "text",
-        "bootstrap"
+        "nav"
     ]);
 
 })();

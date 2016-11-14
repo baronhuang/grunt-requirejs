@@ -140,32 +140,8 @@ module.exports = function (grunt) {
                         //'<%= deployPath %>/lib',
                         //'<%= deployPath %>/index.html'
                         '<%= deployPath %>/*',
-                        '!<%= deployPath %>/META-INF',
-                        '!<%= deployPath %>/WEB-INF',
-                        '!<%= deployPath %>/index.jsp'
-
                     ]
                 }]
-            }
-        },
-        /*给angular添加依赖注入，使压缩的时候更加安全*/
-        ngAnnotate: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '.tmp/concat/js',
-                    src: ['*.js', '!oldieshim.js'],
-                    dest: '.tmp/concat/js'
-                }]
-            }
-        },
-        /*给js和css添加MD5，用于部署新版本*/
-        filerev: {
-            dist: {
-                src: [
-                    '<%= distPath %>/js/{,*/}*.js',
-                    '<%= distPath %>/css/{,*/}*.css'
-                ]
             }
         },
         /*给css添加浏览器的前缀*/
@@ -188,29 +164,6 @@ module.exports = function (grunt) {
                     src: 'css/{,*/}*.css',
                     dest: '<%= distPath %>/css/'
                 }]
-            }
-        },
-        /*配置js和css的优化任务，主要用于未压缩js、css自动转化成已压缩的js和css*/
-        useminPrepare: {
-            html: '<%= appPath %>/index.html',
-            options: {
-                dest: '<%= distPath %>',
-                flow: {
-                    html: {
-                        steps: {
-                            //js: ['concat', 'uglifyjs'],
-                            js: ['uglifyjs'],
-                            css: ['cssmin']
-                        },
-                        post: {}
-                    }
-                }
-            }
-        },
-        usemin: {
-            html: ['<%= distPath %>/{,*/}*.html'],
-            options: {
-                assetsDirs: ['<%= distPath %>']
             }
         },
         /*自定义css压缩配置*/
@@ -238,24 +191,6 @@ module.exports = function (grunt) {
                 cwd: '<%= appPath %>/js',
                 src: ['{,*/}*.js'],
                 dest: '<%= distPath %>/js/'
-            }
-        },
-        /*压缩html模板*/
-        htmlmin: {
-            dist: {
-                options: {
-                    collapseWhitespace: true,
-                    conservativeCollapse: true,
-                    collapseBooleanAttributes: true,
-                    removeCommentsFromCDATA: true,
-                    removeOptionalTags: true
-                },
-                files: [{
-                    expand: true,
-                    cwd: '<%= distPath %>',
-                    src: ['*.html', 'view/{,*/}*.html', 'homePage/{,*/}*.html'],
-                    dest: '<%= distPath %>'
-                }]
             }
         },
         /*写入html模板，专门用做版本控制*/
@@ -357,18 +292,11 @@ module.exports = function (grunt) {
         'clean:dist',
         'sprite',
         'less',
-        //'htmlbuild',
-        //'useminPrepare',
         'autoprefixer:app',
-        //'concat',
-        //'ngAnnotate',
         'copy:dist',
         'csso',
-        //'filerev',
-        //'usemin',
         'uglify',
         'requirejs',
-        //'htmlmin',
         'template',
         'clean:deploy',
         'copy:deploy',

@@ -63,8 +63,8 @@ ______________
 
 代码高亮
 ----
-```
-我是一段javascript代码
+```javascript
+//我是一段javascript代码
 document.getElementById("myH1").innerHTML="Welcome to my Homepage"; //javascipt
 ```
 
